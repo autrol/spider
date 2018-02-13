@@ -3,7 +3,7 @@
  * @Date: 2018-02-13 11:09:38 
  * @Desc: 动态页面爬虫
  * @Last Modified by: zhinian.yang
- * @Last Modified time: 2018-02-13 11:19:17
+ * @Last Modified time: 2018-02-13 11:27:10
  */
 require('chromedriver'); // 导入chrome浏览器 driver
 const fs         = require('fs');
@@ -32,7 +32,7 @@ driver.sleep(3000).then(function () {
 });
 
 function getDetailUrls(cids, index) {
-    if (index === 1) {
+    if (index >= cids.length) {
         // 存入文件
         saveResult(detailUrls);
         return '';
@@ -75,7 +75,6 @@ function renderList(cb) {
                 return false;
             }
         `).then(function (result) {
-            console.log(result);
             if (!result) {
                 typeof cb === 'function' && cb();
                 return;
