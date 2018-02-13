@@ -1,9 +1,9 @@
 /*
  * @Author: zhinian.yang 
  * @Date: 2018-02-13 11:09:38 
- * @Desc: 页面爬虫
- * @Last Modified by:   zhinian.yang 
- * @Last Modified time: 2018-02-13 11:09:38 
+ * @Desc: 动态页面爬虫
+ * @Last Modified by: zhinian.yang
+ * @Last Modified time: 2018-02-13 11:19:17
  */
 require('chromedriver'); // 导入chrome浏览器 driver
 const fs         = require('fs');
